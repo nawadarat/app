@@ -3,9 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
+  declarations: [
+    NavbarComponent,
+  ],
   imports: [
     CommonModule
   ],
-  declarations: [NavbarComponent]
+  exports: [
+    NavbarComponent
+  ]
 })
 export class MastersModule { }
