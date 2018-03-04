@@ -45,6 +45,7 @@ List of services offered to certain customers
 - [ ] Implement authgaurds on routes
 - [ ] Create communicator service
 - [ ] Decide on Framework
+- [ ] Create feature-wise modules and components
 
 
 ## To Do Later
