@@ -35,9 +35,18 @@ List of services offered to certain customers
     * SMS
 * Generate Reports
 
-## Prerequisites 
-- [ ] Backend: Firebace (for now)
-Modules
+## To Do 
+- [x] Backend: Firebace (for now)
+- [x] List Features of the application
+- [x] Create components and modules
+- [ ] Improve components and modules
+- [ ] Implement Routing
+- [ ] Auth Module (Using firebase)
+- [ ] Implement authgaurds on routes
+- [ ] Create communicator service
+- [ ] Decide on Framework
 
-## To Do
+
+## To Do Later
 - [ ] Set app title globally
+- [ ] Make custom APIs (PHP/Node.js)
