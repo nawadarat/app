@@ -1,0 +1,10 @@
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let account of accounts">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ account.name }}</h5>
+      <small>{{ account.status ? 'Active' : 'Inactive' }}</small>
+    </div>
+    <p class="mb-1">{{ account.created | date:'fullDate' }}</p>
+    <small>{{ account.email }} | {{ account.phone }}</small>
+  </a>
+</div>

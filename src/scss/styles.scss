@@ -1,9 +1,4 @@
+@import 'n-variables.scss';
+@import 'variable-overrides.scss';
 @import '~bootstrap/scss/bootstrap.scss';
 @import "../app/masters/navbar/navbar.component.scss";
-
-$brand-color: #E51F1F;
-
-a {
-    color: $brand-color
-}
-

@@ -1,0 +1,26 @@
+<div class="row m-3">
+  <div class="col-sm-6">
+    <input class="form-control form-control-lg my-3" type="text" placeholder="Add new email">
+    <button class="btn btn-primary float-right">Add</button>
+    <button class="btn btn-danger">Delete</button>
+    <button class="btn btn-warning">clear</button>
+    <hr>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let emailee of actionList">
+        {{ emailee.name }}
+        <span class="badge" [ngClass]="{'badge-success': emailee.status, 'badge-warning': !emailee.status }">{{ emailee.email }}</span>
+      </li>
+    </ul>
+    <button class="btn btn-lg btn-brand my-3 float-right">Send Emails</button>
+    <!-- <div class="form-group">
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">
+    Dear [Zaheer Aziz],
+
+    This is to inform you that your account status has been set to [active]. 
+    Kindly be informed.
+
+    Thank You.
+  </textarea>
+</div> -->
+  </div>
+</div>

@@ -1,21 +1,26 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Nawadarat</a>
+<nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+  <!-- fixed-top -->
+  <a class="navbar-brand" href="#">
+    <img src="assets/nawadarat-logo-mark.png" alt=""> Nawadarat</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle >Category</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
-          <a class="dropdown-item" href="#">Angular</a>
-          <a class="dropdown-item" href="#">React</a>
-          <a class="dropdown-item" href="#">Vue.js</a>
-        </div>
+      <li class="navbar-iten">
+        <a href="#" class="nav-link">Accounts</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+      <li class="navbar-iten">
+        <a href="#" class="nav-link">To Do</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Manage</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+          <a class="dropdown-item" href="#">User</a>
+        </div>
       </li>
     </ul>
     <!-- <form class="form-inline mt-2 mt-md-0">
