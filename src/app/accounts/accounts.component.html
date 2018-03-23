@@ -5,15 +5,24 @@
         <h1>Manage Accounts</h1>
       </div>
       <div class="col-md-2 text-right">
-        <button type="button" class="btn btn-brand">New Account</button>
+        <button type="button" class="btn btn-brand" >New Account</button>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <app-account-list></app-account-list>
+        <!-- <app-account-list [accounts]="newAccount"></app-account-list> -->
+        <app-account-list (accountWasSelected)="selectedAccount = $event"></app-account-list>
       </div>
       <div class="col-md-8">
-        <app-account></app-account>
+        <app-account 
+        *ngIf="selectedAccount; else infoText"
+        [account]="selectedAccount"
+        ></app-account>
+        <ng-template #infoText>
+          <div class="alert alert-warning">
+            Please select an Account
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

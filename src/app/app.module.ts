@@ -11,6 +11,7 @@ import { AccountComponent } from './accounts/account/account.component';
 import { HeaderComponent } from './masters/header/header.component';
 import { AccountListComponent } from './accounts/account-list/account-list.component';
 import { ActionListComponent } from './action-list/action-list.component';
+import { AccountListItemComponent } from './accounts/account-list/account-list-item/account-list-item.component';
 
 
 
@@ -22,6 +23,7 @@ import { ActionListComponent } from './action-list/action-list.component';
     AccountComponent,
     ActionListComponent,
     AccountListComponent,
+    AccountListItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,10 @@
-<app-header></app-header>
+<!-- <app-header ></app-header> -->
+<!-- Took this out of app-header because @Output should communicateto parent component -->
+<app-navbar (featureSelected)="navigate($event)"></app-navbar>
 <div class="container-fluid">
 
-    <app-accounts></app-accounts>
+    <app-accounts *ngIf="leadedFeature === 'accounts'"></app-accounts>
 
-    <app-action-list></app-action-list>
+    <app-action-list *ngIf="leadedFeature === 'todo'"></app-action-list>
     
-</div>
+</div> 
