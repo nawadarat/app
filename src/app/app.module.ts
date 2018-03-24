@@ -13,6 +13,7 @@ import { AccountListComponent } from './accounts/account-list/account-list.compo
 import { ActionListComponent } from './action-list/action-list.component';
 import { AccountListItemComponent } from './accounts/account-list/account-list-item/account-list-item.component';
 import { ErrorHandler } from './_services/errorhandler.service';
+import { ActionListService } from './_services/action-list.service';
 
 
 
@@ -32,7 +33,7 @@ import { ErrorHandler } from './_services/errorhandler.service';
     AppRoutingModule,
     MastersModule
   ],
-  providers: [ErrorHandler],
+  providers: [ErrorHandler, ActionListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

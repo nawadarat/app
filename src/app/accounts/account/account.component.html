@@ -1,12 +1,11 @@
 <h2>
   {{ account.name }}
   <small class="badge" [ngClass]="{'badge-success': account.status, 'badge-warning': !account.status }">{{ account.status ? 'Active' : 'Inactive' }}</small>
+  <button class="btn btn-primary float-right" (click)=addToList()>To Email List</button>
 </h2>
 <hr>
 <p>{{ account.created | date:'fullDate' }} </p>
 <p>{{ account.email }}
-  <a href="" class="badge badge-primary">+</a>
 </p>
 <p> {{ account.phone }}
-  <a href="" class="badge badge-primary">+</a>
 </p>
