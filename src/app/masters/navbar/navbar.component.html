@@ -15,11 +15,13 @@
         <a href="#" class="nav-link" (click)="onSelect('todo')">To Do</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Manage</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
-          <a class="dropdown-item" href="#">User</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown" dropdownToggle>
+        <a class="nav-link dropdown-toggle" >Manage</a>
+        <div class="dropdown-menu dropdown-menu-right" >
+          <a class="dropdown-item" href="#">My Profile</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">Users</a>
         </div>
       </li>
     </ul>
