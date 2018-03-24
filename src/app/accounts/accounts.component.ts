@@ -1,24 +1,24 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Account } from './account/account.model';
+import { AccountsService } from './accounts.service';
 
 @Component({
   selector: 'app-accounts',
   templateUrl: './accounts.component.html',
-  styleUrls: ['./accounts.component.scss']
+  styleUrls: ['./accounts.component.scss'],
+  providers: [ AccountsService ]
 })
 export class AccountsComponent implements OnInit {
 
-  newAccount: Account[] = [
-    new Account('asasass asas', 'waleed.haq@gmail.com', '+92321212121', new Date(2018, 3, 1), true),
-    new Account('asas Shasasah', 'maqbool.shah@gmail.com', '+92321212121', new Date(2018, 3, 2), false),
-    new Account('Atasasif asas', 'atif.kamal@gmail.com', '+92321212121', new Date(2018, 3, 1), true),
-  ]
+  selectedAccount: Account;
 
- selectedAccount: Account;
- 
-  constructor() { }
+  constructor(private accService: AccountsService) { }
 
   ngOnInit() {
+    this.accService.accountSelected
+      .subscribe(
+        (account: Account) => {
+          this.selectedAccount = account; 
+        });
   }
 
 }

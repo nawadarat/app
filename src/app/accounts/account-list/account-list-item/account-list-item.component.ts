@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Account } from '../../account/account.model';
+import { AccountsService } from '../../accounts.service';
 
 @Component({
   selector: 'app-account-list-item',
@@ -8,16 +9,16 @@ import { Account } from '../../account/account.model';
 })
 export class AccountListItemComponent implements OnInit {
 
-  @Input() account = Account;
-  @Output() accountSelected = new EventEmitter<void>();
-
-  constructor() { }
+  @Input() account: Account;
+  
+  constructor(private accService: AccountsService) { }
 
   ngOnInit() {
   }
 
   onSelect() {
-    this.accountSelected.emit();
+    // this.accountSelected.emit();
+    this.accService.accountSelected.emit(this.account)
   }
 
 }

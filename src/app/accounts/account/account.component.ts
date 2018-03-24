@@ -7,13 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  @Input() account: Account ;
+  @Input() account: Account;
 
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.account)
+    // console.log(this.account)
   }
 
 }

@@ -1,7 +1,6 @@
 <div class="list-group">
   <app-account-list-item 
     *ngFor="let account of accounts"
-    [account]="account"
-    (accountSelected)="afterAccountSelected(account)">
+    [account]="account">
   </app-account-list-item>
 </div>
