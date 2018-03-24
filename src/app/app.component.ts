@@ -8,7 +8,7 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
 
   title = 'Nawadarat';
-  leadedFeature = 'todo'
+  leadedFeature = 'accounts'
 
 
   constructor() { }

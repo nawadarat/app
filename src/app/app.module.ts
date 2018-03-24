@@ -12,6 +12,7 @@ import { HeaderComponent } from './masters/header/header.component';
 import { AccountListComponent } from './accounts/account-list/account-list.component';
 import { ActionListComponent } from './action-list/action-list.component';
 import { AccountListItemComponent } from './accounts/account-list/account-list-item/account-list-item.component';
+import { ErrorHandler } from './_services/errorhandler.service';
 
 
 
@@ -31,7 +32,7 @@ import { AccountListItemComponent } from './accounts/account-list/account-list-i
     AppRoutingModule,
     MastersModule
   ],
-  providers: [],
+  providers: [ErrorHandler],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

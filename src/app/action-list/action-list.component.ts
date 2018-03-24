@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActionList } from './action-list.model';
+import { ErrorHandler } from '../_services/errorhandler.service';
 
 @Component({
   selector: 'app-action-list',
   templateUrl: './action-list.component.html',
-  styleUrls: ['./action-list.component.scss']
+  styleUrls: ['./action-list.component.scss'],
+  providers: [ ]
 })
 export class ActionListComponent implements OnInit {
 
@@ -23,7 +25,7 @@ export class ActionListComponent implements OnInit {
   @ViewChild('emailInput') emailEl: ElementRef;
   @ViewChild('statusInput') statusEl: ElementRef;
 
-  constructor() { }
+  constructor(private errorHandler: ErrorHandler) { }
 
   ngOnInit() {
   }
@@ -43,7 +45,7 @@ export class ActionListComponent implements OnInit {
       // ToDo: Clear the form when added successfully
       // ToDo: Add to the top of the array
     } else {
-      console.log("No Name and email entered")
+      this.errorHandler.logMessage("Please enter at least something")
     }    
     
   }
