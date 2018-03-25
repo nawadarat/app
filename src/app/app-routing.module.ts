@@ -14,6 +14,7 @@ const routes: Routes = [
     // { path: '', component: AccountComponent }, 
     { path: 'manage', component: AccountManageComponent },
     { path: ':id', component: AccountComponent },
+    { path: ':id/manage', component: AccountManageComponent },
   ] },
   { path: 'todo', component: ActionListComponent },
 ];

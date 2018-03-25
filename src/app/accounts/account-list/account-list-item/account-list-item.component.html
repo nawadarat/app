@@ -1,7 +1,7 @@
 <a class="list-group-item list-group-item-action aliig flex-column" 
 routerLink="{{ account.id }}"
 routerLinkActive="active"
-[ngClass]="{'list-group-item-warning' : !account.status}">
+[ngClass]="{'list-group-item-danger' : !account.status}">
   <div class="d-flex w-100 justify-content-between">
     <h5 class="mb-1">{{ account.name }}</h5>
     <small>{{ account.status ? 'Active' : 'Inactive' }}</small>

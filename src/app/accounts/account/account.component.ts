@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Account } from './account.model';
 import { ActionListService } from '../../_services/action-list.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AccountsService } from '../accounts.service';
 
 @Component({
@@ -18,6 +18,7 @@ export class AccountComponent implements OnInit {
   constructor(
     private actionListService: ActionListService,
     private accService: AccountsService,
+    private router: Router,
     private route: ActivatedRoute
   ) { }
 
@@ -37,5 +38,9 @@ export class AccountComponent implements OnInit {
 
   addToList() {
     this.actionListService.addListItem(this.account.name, this.account.email, this.account.status)
+  }
+
+  edit() {
+    this.router.navigate(['manage'], { relativeTo: this.route })
   }
 }
