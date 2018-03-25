@@ -1,24 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AccountsService } from './accounts.service';
 
 @Component({
   selector: 'app-accounts',
   templateUrl: './accounts.component.html',
   styleUrls: ['./accounts.component.scss'],
-  providers: [ AccountsService ]
+  providers: [AccountsService]
 })
 export class AccountsComponent implements OnInit {
 
-  selectedAccount: Account;
-
-  constructor(private accService: AccountsService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.accService.accountSelected
-      .subscribe(
-        (account: Account) => {
-          this.selectedAccount = account; 
-        });
+
   }
 
 }
