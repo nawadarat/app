@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Account } from './account.model';
 import { ActionListService } from '../../_services/action-list.service';
+import { ActivatedRoute, Params } from '@angular/router';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-account',
@@ -9,16 +11,28 @@ import { ActionListService } from '../../_services/action-list.service';
 })
 export class AccountComponent implements OnInit {
 
-  @Input() account: Account;
+  id: any;
+  account: Account;
 
 
-  constructor(private actionListService: ActionListService) { }
+  constructor(
+    private actionListService: ActionListService,
+    private accService: AccountsService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    // console.log(this.account)
+
+   this.route.params.subscribe(
+     (params: Params) => {
+       this.id = +params['id']
+       this.account = this.accService.getAccount(this.id);
+     }
+   );
+
   }
 
   addToList() {
-   this.actionListService.addListItem(this.account.name, this.account.email, this.account.status)
+    this.actionListService.addListItem(this.account.name, this.account.email, this.account.status)
   }
 }

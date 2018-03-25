@@ -16,9 +16,5 @@ export class AccountListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect() {
-    // this.accountSelected.emit();
-    this.accService.accountSelected.emit(this.account)
-  }
-
+  
 }

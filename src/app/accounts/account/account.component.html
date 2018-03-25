@@ -1,5 +1,5 @@
 <h2>
-  {{ account.name }}
+  {{ account.name }} (#{{ account.id+1 }})
   <small class="badge" [ngClass]="{'badge-success': account.status, 'badge-warning': !account.status }">{{ account.status ? 'Active' : 'Inactive' }}</small>
   <button class="btn btn-primary float-right" (click)=addToList()>To Email List</button>
 </h2>
