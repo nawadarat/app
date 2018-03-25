@@ -41,6 +41,6 @@ export class AccountComponent implements OnInit {
   }
 
   edit() {
-    this.router.navigate(['manage'], { relativeTo: this.route })
+    this.router.navigate(['manage'], {queryParams: {token: 'Aasaswqeqwdas344t*&$&*(SIFAUFSU2TO8G786o2efluscldp9695256', user:'username' }, fragment: 'fragment', relativeTo: this.route })
   }
 }
