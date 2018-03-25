@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,10 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Nawadarat';
-  leadedFeature = 'accounts'
-
+  @Output() title = 'Nawadarat';
+  
 
   constructor() { }
-
-  navigate(feature: string) {
-    // console.log(e)
-    this.leadedFeature = feature;
-  }
 
   ngOnInit() {
 

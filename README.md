@@ -66,3 +66,5 @@ List of services offered to certain customers
 - [ ] Batch Email Send from Action List
 - [ ] Auto Complete list with Accounts
 
+## Notes
+* Had to declare the Navbar Component in the appModule because the routerLink did not work. I believe this is becuase it has something to do with lazy loading or child routes.

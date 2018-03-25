@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,15 +7,10 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Output() featureSelected = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelect(feature: string) {
-    // console.log(feature);
-    this.featureSelected.emit(feature)
-  }
 }

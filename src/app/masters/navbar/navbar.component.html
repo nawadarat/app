@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
   <!-- fixed-top -->
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" routerLink="/">
     <img src="assets/nawadarat-logo-mark.png" alt=""> Nawadarat</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,19 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="navbar-iten">
-        <a href="#" class="nav-link" (click)="onSelect('accounts')">Accounts</a>
+        <a class="nav-link" routerLink="/accounts" routerLinkActive="active">Accounts</a>
       </li>
       <li class="navbar-iten">
-        <a href="#" class="nav-link" (click)="onSelect('todo')">To Do</a>
+        <a class="nav-link" routerLink="/todo" routerLinkActive="active">To Do</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown" dropdownToggle>
         <a class="nav-link dropdown-toggle" >Manage</a>
         <div class="dropdown-menu dropdown-menu-right" >
-          <a class="dropdown-item" href="#">My Profile</a>
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Users</a>
+          <a class="dropdown-item" >My Profile</a>
+          <a class="dropdown-item" >Settings</a>
+          <a class="dropdown-item" >Users</a>
         </div>
       </li>
     </ul>

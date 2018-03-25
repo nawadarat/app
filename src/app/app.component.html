@@ -1,10 +1,9 @@
 <!-- <app-header ></app-header> -->
 <!-- Took this out of app-header because @Output should communicateto parent component -->
-<app-navbar (featureSelected)="navigate($event)"></app-navbar>
+<!-- <app-navbar (featureSelected)="navigate($event)"></app-navbar> -->
+<!-- Had to take this out because routerLink did not work
+    it may have to do something with child routes or lazy loading -->
+<app-navbar></app-navbar>
 <div class="container-fluid">
-
-    <app-accounts *ngIf="leadedFeature === 'accounts'"></app-accounts>
-
-    <app-action-list *ngIf="leadedFeature === 'todo'"></app-action-list>
-    
-</div> 
+    <router-outlet></router-outlet>
+</div>
