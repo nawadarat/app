@@ -25,7 +25,7 @@
     <ul class="list-group list-group-flush pt-3">
       <li class="list-group-item" *ngFor="let emailee of actionList">
         {{ emailee.name }}
-        <span class="badge" [ngClass]="{'badge-success': emailee.status, 'badge-warning': !emailee.status }">{{ emailee.email }}</span>
+        <span class="badge" [ngClass]="{'badge-primary': emailee.status, 'badge-danger': !emailee.status }">{{ emailee.email }}</span>
       </li>
     </ul>
     <button class="btn btn-lg btn-brand my-3 float-right">Send Emails</button>
