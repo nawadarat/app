@@ -11,7 +11,7 @@ import { AccountsService } from '../accounts.service';
 })
 export class AccountComponent implements OnInit {
 
-  id: any;
+  id: number;
   account: Account;
 
 
@@ -27,6 +27,9 @@ export class AccountComponent implements OnInit {
      (params: Params) => {
        this.id = +params['id']
        this.account = this.accService.getAccount(this.id);
+     },
+     (error: any) => {
+       console.log(error)
      }
    );
 

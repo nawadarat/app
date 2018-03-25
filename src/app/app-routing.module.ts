@@ -11,8 +11,9 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   // { path: '', redirectTo: '/accounts', pathMatch: "full" },
   { path: 'accounts', component: AccountsComponent, children: [
-    { path: '', component: AccountManageComponent }, 
-    { path: ':id', component: AccountComponent }
+    // { path: '', component: AccountComponent }, 
+    { path: 'manage', component: AccountManageComponent },
+    { path: ':id', component: AccountComponent },
   ] },
   { path: 'todo', component: ActionListComponent },
 ];

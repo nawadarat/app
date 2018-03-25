@@ -1,5 +1,7 @@
-<a class="list-group-item list-group-item-action flex-column align-items-start" 
-routerLink="{{ account.id }}">
+<a class="list-group-item list-group-item-action aliig flex-column" 
+routerLink="{{ account.id }}"
+routerLinkActive="active"
+[ngClass]="{'list-group-item-warning' : !account.status}">
   <div class="d-flex w-100 justify-content-between">
     <h5 class="mb-1">{{ account.name }}</h5>
     <small>{{ account.status ? 'Active' : 'Inactive' }}</small>
